@@ -2,7 +2,10 @@ package rewards;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
+
+import config.RewardsConfig;
 
 import javax.sql.DataSource;
 
@@ -52,6 +55,8 @@ import javax.sql.DataSource;
  * - If your test fails - did you miss the import in TO DO 7 above?
  *
  */
+
+@Import(RewardsConfig.class)
 @Configuration
 public class TestInfrastructureConfig {
 
